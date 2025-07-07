@@ -1,4 +1,4 @@
-# 🍽️ NNT QR-Based Food Ordering System
+# 🍽️ Web-Based Food Ordering System for NNT Purple Food House
 
 An online food ordering system that allows customers to scan a QR code, view the menu, and place orders from their mobile devices. Designed for **NNT Purple Food House**, this system streamlines the ordering process and improves service efficiency.
 
