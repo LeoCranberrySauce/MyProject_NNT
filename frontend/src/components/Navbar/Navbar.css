@@ -26,11 +26,6 @@
     padding: 15px 10vw;
 }
 
-.navbar .active {
-    padding-bottom: 2px;
-    border-bottom: 2px solid #210031;
-}
-
 .navbar-right {
     display: flex;
     align-items: center;
@@ -51,6 +46,14 @@
     font-size: 18px;
     margin-left: auto;
     margin-right: 60px;
+}
+
+.navbar-menu .active {
+    background-color: rgba(97, 0, 161, 0.75);
+    color: #f6e6ff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: -10px;
 }
 
 .navbar-search-icon {
@@ -126,6 +129,32 @@
     list-style: none;
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-icon svg {
+    stroke: #f6e6ff;      /* Original color */
+    transition: stroke 0.2s;
+}
+.menu-icon:hover svg {
+    stroke: #5800a1;      /* Hover color */
+}
+
+/* Overlay for mobile menu */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 1100;
+}
 
 
 /* Make a website responsive to view it on your phone. */
@@ -169,7 +198,7 @@
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:600px) {
     .navbar-menu {
         display: none;
     }
@@ -184,5 +213,49 @@
     }
     .navbar .logo {
         width: 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-icon {
+        display: block;
+        position: static;
+        order: 0;
+        margin-right: 16px;
+        margin-left: 0;
+        align-self: center;
+    }
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo {
+        order: 1;
+    }
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -70vw;
+        width: 70vw;
+        height: 100vh;
+        background: #f6e6ff;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding-top: 80px;
+        gap: 30px;
+        font-size: 20px;
+        margin: 0;
+        transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+        z-index: 1102;
+    }
+    .navbar-menu.active {
+        right: 0;
+    }
+    .mobile-menu-overlay.active {
+        display: block;
+    }
+    .navbar-right {
+        gap: 15px;
     }
 }
