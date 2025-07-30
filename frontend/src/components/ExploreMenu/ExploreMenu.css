@@ -29,7 +29,7 @@
 .explore-menu-list {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 75px;
     text-align: center;
     margin: 20px 0px;
     overflow-x: scroll;
@@ -84,9 +84,9 @@
     }
 
     .explore-menu-list-item img {
-        width: 12vw;
-        height: 12vw;
-        min-width: 45px;
+        width: 7.5vw;
+        height: 100%;
+        min-width: 80px;
         cursor: pointer;
         border-radius: 50%;
         transition: 0.2s;
@@ -108,16 +108,16 @@
     .explore-menu-list {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 40px;
         text-align: center;
         margin: 20px 0px;
         overflow-x: scroll;
     }
 
     .explore-menu-list-item img {
-        width: 12vw;
-        height: 12vw;
-        min-width: 20px;
+        width: 7.5vw;
+        height: 100%;
+        min-width: 80px;
         cursor: pointer;
         border-radius: 50%;
         transition: 0.2s;

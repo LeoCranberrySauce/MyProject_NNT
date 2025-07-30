@@ -37,11 +37,11 @@ const FoodItem = ({id,name,size,price,description,image,stock}) => {
       </div>
       <div className="food-item-info">
         <div className="food-item-name-rating">
-            <p>{name}</p>
+            <p>{name} {size && `(${size})`}</p>
             <img src={assets.rating_starts} alt="" />
         </div>
         <p className='food-item-desc'>{description}</p>
-        <p className='food-item-price'>{formatCurrency1(price)} {size && `(${size})`}</p>
+        <p className='food-item-price'>{formatCurrency1(price)}</p>
         <p className={`food-item-stock ${isOutOfStock ? 'out-of-stock' : ''}`}>
           {isOutOfStock ? 'Out of Stock' : `Available: ${remainingStock}`}
         </p>
